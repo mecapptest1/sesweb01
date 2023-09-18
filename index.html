@@ -3,30 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ses Web</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Web Ses Dosyalarinin Otomatik Oynatilmasinin Denenmesi</h1>
 
-    <audio>
-        <source src="" type="audio/mpeg">
-    </audio>
-
-    <video controls autoplay muted>
-        <source src="cat.mp4" type="audio/mp4">
-    </video>
-
-
-    //control autoplay silindi 
-    <video="" autoplay="" name="media"><source src="https://docs.unrealengine.com/4.26/Attachments/WorkingWithMedia/MediaFramework/HowTo/StreamMediaSource/Infiltrator%20Demo.mp4" type="video/mp4"></video=>
-    <source src="https://docs.unrealengine.com/4.26/Attachments/WorkingWithMedia/MediaFramework/HowTo/StreamMediaSource/Infiltrator%20Demo.mp4" type="video/mp4">
-
-
-
-
-
+      <video id="myVideo" autoplay muted>
+        <source src="cat.mp4" type="video/mp4">
+      </video>
+      
+      <script>
+      // Video ve sesi açma işlemini gerçekleştir
+      var video = document.getElementById('myVideo');
+      
+      video.addEventListener('canplaythrough', function() {
+        video.muted = false; // Ses aç
+        video.play(); // Videoyu başlat
+      });
+      </script>
+      
 
 
 </body>
-<script src="script.js"></script>
 </html>
