@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Otomatik Video Başlatma</title>
 </head>
 <body>
 
-      <video id="myVideo" autoplay muted>
-        <source src="cat.mp4" type="video/mp4">
-      </video>
-      
+    <audio id="myAudio" controls autoplay muted>
+        <source src="ses1.mp3" type="audio/mp3">
+    </audio>
+
+
+
+
       <script>
-      // Video ve sesi açma işlemini gerçekleştir
-      var video = document.getElementById('myVideo');
-      
-      video.addEventListener('canplaythrough', function() {
-        video.muted = false; // Ses aç
-        video.play(); // Videoyu başlat
-      });
-      </script>
-      
+        // Ses dosyasını açma işlemini gerçekleştir
+        var audio = document.getElementById('myAudio');
+        
+        audio.addEventListener('canplaythrough', function() {
+          audio.muted = false; // Ses aç
+          audio.play(); // Ses dosyasını başlat
+        });
+        </script>
+        
 
 
 </body>
